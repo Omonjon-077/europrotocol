@@ -1,0 +1,56 @@
+/* ============ only desktop view for dropdown menus | Omonjon ============ */
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item:hover .nav-link {
+        color: var(--bs-secondary);
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: rotateX(-75deg);
+        transform-origin: 0 0;
+    }
+
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
+
+/* ============ desktop view .end// ============ */
+@media (max-width: 575px) {
+    .d-grid-custom {
+        text-align: start;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .introSwiper .swiper-slide {
+        height: 400px;
+    }
+
+    .scrollup {
+        right: 1rem;
+    }
+}
