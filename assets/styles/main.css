@@ -21,6 +21,9 @@ body {
     font-family: Manrope, sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    background: #222D2F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0B0F19, #222D2F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0B0F19, #222D2F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .title-color {
@@ -63,6 +66,13 @@ body {
     padding-left: 0;
     padding-bottom: 0;
     padding-top: 0;
+}
+
+.btn-primary{
+    border-radius: 2px;
+    color: black;
+    background: var(--bs-primary);
+    box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
 }
 
 .cursor-pointer {
@@ -154,11 +164,6 @@ button {
     outline: none;
 }
 
-.btn-primary:hover{
-    background: transparent;
-    color: var(--bs-primary);
-}
-
 .border-none {
     border: none;
 }
@@ -204,171 +209,6 @@ a {
     height: 100%;
 }
 
-/*=============== Maxsus imkoniyatalar ===============*/
-/*=============== toggle effects ===============*/
-html.blind {
-    filter: grayscale(1) invert(0);
-    -webkit-filter: grayscale(1) invert(0);
-    -moz-filter: grayscale(1) invert(0);
-    -o-filter: grayscale(1) invert(0);
-    background-color: darkgrey;
-    background-image: none;
-    color: #333 !important;
-}
-
-#toggleThemeMode[type=checkbox],
-#toggleVoiceMode[type=checkbox] {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 99;
-    opacity: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-}
-
-.darkmode .label,
-.voicemode .label {
-    display: flex;
-    width: 60px;
-    height: 30px;
-    border: 2px solid;
-    border-radius: 99em;
-    position: relative;
-    transition: transform 0.5s ease-in-out;
-    transform-origin: 50% 50%;
-    cursor: pointer;
-}
-
-.darkmode .label:before,
-.voicemode .label:before {
-    transition: transform 0.5s ease;
-    transition-delay: 0s;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: #000;
-    border-radius: 50%;
-    top: 4px;
-    left: 4px;
-}
-
-#toggleThemeMode[type=checkbox]:checked+.label:before,
-#toggleVoiceMode[type=checkbox]:checked+.label:before {
-    transform: translateX(30px);
-    background-color: var(--bs-dark);
-}
-
-#toggleThemeMode[type=checkbox]:checked+.label,
-#toggleVoiceMode[type=checkbox]:checked+.label {
-    background-color: var(--bs-primary);
-}
-
-.noDefalult {
-    width: auto;
-    display: inline-block;
-    cursor: default;
-    position: relative;
-    color: #212529 !important;
-    padding: 0 !important;
-}
-
-.btn-voice,
-#voiceSelect {
-    display: none;
-}
-
-.btn-voice {
-    z-index: 999;
-    border: 2px solid var(--bs-dark);
-    border-radius: 8px;
-    overflow: hidden;
-    border-radius: 50%;
-    width: 42px;
-    height: 42px;
-}
-
-.visibility-hidden {
-    visibility: hidden !important;
-}
-
-.user-select {
-    user-select: none !important;
-}
-
-/*=============== voice ===============*/
-.icon-voice {
-    background: var(--bs-primary);
-    width: 100%;
-    height: 100%;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-.decremet {
-    font-size: 10px;
-    opacity: 0.4;
-    user-select: none;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.decremet.visibile {
-    visibility: visible;
-    user-select: auto;
-    pointer-events: visible;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.increment {
-    font-size: 24px;
-    visibility: visible;
-    user-select: auto;
-    pointer-events: visible;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.increment.visibile-hide {
-    opacity: 0.4;
-    user-select: none;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.increment,
-.decremet,
-.autoSize {
-    width: 40px;
-    height: 40px;
-    background-color: var(--bs-primary);
-    color: var(--bs-secondary) !important;
-    transition: 0.3s ease;
-    border-radius: 8px;
-    border: 1px solid var(--bs-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    border: none !important;
-}
-
-.dropdown-not-close .dropdown-item:hover,
-.dropdown-not-close .dropdown-item:focus {
-    background-color: var(--bs-secondary) !important;
-    color: var(--bs-primary) !important;
-}
-
-
 /* ==================== Header | Omonjon ==================== */
 .sticky {
     position: fixed;
@@ -379,230 +219,21 @@ html.blind {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.header .primary-hover:hover i {
-    color: var(--bs-primary);
-}
-
-.nice-select-default {
-    background-color: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-}
-
-.btn-close:focus {
-    box-shadow: none;
-}
-
-.dropdown-arrow.show::after {
-    transform: rotate(-135deg);
-}
-
-.dropdown-arrow:hover:after,
-.dropdown-arrow:focus:after{
-    border-color: var(--bs-primary);
-}
-
-.dropdown-arrow::after {
-    border-bottom: 2px solid #999;
-    border-right: 2px solid #999;
-    border-left: initial !important;
-    border-top: initial !important;
-    content: "";
-    display: block;
-    height: 6px;
-    margin-top: -4px;
-    pointer-events: none;
-    position: absolute;
-    right: 2px;
-    top: 55%;
-    transform-origin: 66% 66%;
-    transform: rotate(45deg);
-    /* transition: all .15s ease-in-out; */
-    transition: var(--primary-transition);
-    width: 6px;
-}
-
-/* ==================== APP SECTION | Omonjon ==================== */
-.app-section-title{
-    font-size: 30px;
-    margin-bottom: 55px;
-    line-height: 30px;
-    color: #313131;
-    font-weight: 700;
-    position: relative;
-}
-
-.app-section-title:after{
-    content: "Мобильное приложение";
-    position: absolute;
-    left: -25px;
-    top: -20px;
-    max-width: 818px;
-    width: 100%;
-    height: auto;
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 30px;
-    opacity: 0.1;
-    color: rgb(20, 82, 159);
-}
-
-/* ==================== PRODUCTS SECTION | Omonjon ==================== */
-.products-section-title{
-    font-size: 30px;
-    line-height: 30px;
-    color: #313131;
-    font-weight: 700;
-    position: relative;
-}
-
-.products-section-title:after{
-    content: "Страховые продукты";
-    position: absolute;
-    left: -25px;
-    top: -20px;
-    max-width: 818px;
-    width: 100%;
-    height: auto;
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 30px;
-    opacity: 0.1;
-    color: rgb(20, 82, 159);
-}
-
-.products__item {
-    border-bottom: 2px solid transparent;
-}
-
-.products-section .active-product {
-    color: var(--bs-primary) !important;
-    border-bottom: 2px solid var(--bs-warning) !important;
-}
-
-/* ==================== NEWS COMPANY SECTION | Omonjon ==================== */
-.news-company-title{
-    font-size: 30px;
-    line-height: 30px;
-    color: #313131;
-    font-weight: 700;
-    position: relative;
-}
-
-.news-company-title:after{
-    content: "Новости компании";
-    position: absolute;
-    left: -25px;
-    top: -20px;
-    max-width: 818px;
-    width: 100%;
-    height: auto;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 30px;
-    opacity: 0.1;
-    color: rgb(20, 82, 159);
-}
-
-.hover-shadow:hover {
-    transform: translateY(-15px);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-.hover-sm-shadow:hover {
-    transform: translateY(-6px);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-/* ==================== NEWS INS SECTION | Omonjon ==================== */
-.news-ins-title{
-    font-size: 30px;
-    line-height: 30px;
-    color: #313131;
-    font-weight: 700;
-    position: relative;
-}
-
-.news-ins-title:after{
-    content: "Новости компании";
-    position: absolute;
-    left: -25px;
-    top: -20px;
-    max-width: 818px;
-    width: 100%;
-    height: auto;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 30px;
-    opacity: 0.1;
-    color: rgb(20, 82, 159);
-}
-
-/* ==================== CONTACT SECTION | Omonjon ==================== */
-.contact-section-title{
-    font-size: 30px;
-    line-height: 30px;
-    color: #313131;
-    font-weight: 700;
-    position: relative;
-}
-
-.contact-section-title:after{
-    content: "Контактная информация";
-    position: absolute;
-    left: -25px;
-    top: -20px;
-    max-width: 818px;
-    width: 100%;
-    height: auto;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 30px;
-    opacity: 0.1;
-    color: rgb(20, 82, 159);
-}
-
-.work-process {
-    max-width: 500px;
-    margin: 50px auto;
-}
-
-.project-bar {
-    height: 25px;
-    background: #e0e0e0;
-    border-radius: 30px;
-}
-
-.project-percent {
-    height: 25px;
-    background-color: #216ECF;
-    border-radius: 30px;
-    position: relative;
-    width: 0;
-    transition: 2s linear;
-}
-
-.project-percent::before {
-    content: attr(percent);
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    padding: 1px 0px;
-    color: #ffffff;
-    font-size: 15px;
-    border-radius: 25px;
-    font-weight: bold;
-    width: 20px;
-    margin: 0px auto;
+/*=============== INTRO SECTION | Omonjon ===============*/
+.intro-section{
+    background-image: url("../images/intro-bg.jpg") !important;
+    min-height: 100vh;
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
     border-radius: .5rem;
-    background-color: hsl(207, 4%, 80%);
+    background-color: hsla(92, 100%, 48%, 0.71)
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(207, 4%, 65%);
+    background-color: hsl(92, 100%, 48%);
     border-radius: .5rem;
 }
 
@@ -637,46 +268,8 @@ html.blind {
     bottom: 4rem;
 }
 
-@media (max-width: 1200px) {
-    .products-section-title:after{
-        display: none;
-        font-size: 25px;
-    }
-}
-
 @media (max-width: 767px) {
-    .app-section-title,
-    .products-section-title,
-    .news-company-title,
-    .news-ins-title,
-    .contact-section-title{
-        font-size: 20px;
-    }
-    .app-section-title:after,
-    .news-company-title:after,
-    .news-ins-title:after,
-    .contact-section-title:after{
-        top: -15px;
-        font-size: 40px;
-    }
     .scroll_up {
         right: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .app-section-title,
-    .products-section-title,
-    .news-company-title,
-    .news-ins-title,
-    .contact-section-title{
-        text-align: center;
-        font-size: 20px;
-    }
-    .app-section-title:after,
-    .news-company-title:after,
-    .news-ins-title:after,
-    .contact-section-title:after{
-        display: none;
     }
 }
