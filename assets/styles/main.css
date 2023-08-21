@@ -14,15 +14,15 @@
     --text-color: #000000;
     --text-color-light: #737387;
     --color-gray: #F1F2F4;
-    --primary-transition:0.37s;
+    --primary-transition: 0.37s;
 }
 
 body {
     font-family: Manrope, sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    background: #222D2F;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0B0F19, #222D2F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #222D2F; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0B0F19, #222D2F); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0B0F19, #222D2F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -38,7 +38,7 @@ body {
     color: var(--text-color) !important;
 }
 
-.text-color-light{
+.text-color-light {
     color: var(--text-color-light) !important;
 }
 
@@ -53,6 +53,7 @@ body {
 .w-56px {
     width: 56px;
 }
+
 .h-35px {
     height: 35px;
 }
@@ -68,7 +69,7 @@ body {
     padding-top: 0;
 }
 
-.accordion-button::after{
+.accordion-button::after {
     display: none;
 }
 
@@ -79,43 +80,44 @@ button[aria-expanded^="true"] i {
     box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
 }
 
-.btn-primary{
+.btn-primary {
     border-radius: 2px;
-    color: black;  
+    color: black;
     background: var(--bs-primary);
     box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
 }
 
-.self-height-siwper{
+.self-height-siwper {
     height: 300px;
 }
 
-.box-shadow-none{
+.box-shadow-none {
     box-shadow: none !important;
 }
-.text-tg{
+
+.text-tg {
     color: #4C82F7 !important;
 }
 
-.bg-gray{
+.bg-gray {
     background-color: #131720 !important;
 }
 
-.primary-shadow{
+.primary-shadow {
     box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
 }
 
-.self-absolute{
+.self-absolute {
     position: absolute !important;
     top: 10px !important;
     left: 30px !important;
 }
 
-.bg-gray-light{
+.bg-gray-light {
     background-color: #1c2029 !important;
 }
 
-.btn-secondary{
+.btn-secondary {
     border-radius: 2px;
     color: var(--bs-primary);
     border: 1px solid var(--bs-primary);
@@ -215,7 +217,7 @@ button {
     border: none;
 }
 
-.primary-hover:hover{
+.primary-hover:hover {
     color: var(--bs-primary) !important;
 }
 
@@ -267,9 +269,45 @@ a {
 }
 
 /*=============== INTRO SECTION | Omonjon ===============*/
-.intro-section{
+.intro-section {
     background-image: url("../images/intro-bg.jpg") !important;
     /* min-height: 70vh; */
+}
+
+/*=============== NEWS SWIPER | Omonjon ===============*/
+.news-section {
+    padding: 0 10px !important;
+}
+
+.news-section .swiper-button-prev::after,
+.news-section .swiper-button-next::after {
+    content: '';
+}
+
+.news-section .swiper-slide {
+    margin-bottom: 4.5rem;
+}
+
+.news-section .swiper-pagination-bullets {
+    bottom: 0;
+}
+
+.news-section .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background-color: #FFFFFF;
+    opacity: .7;
+}
+
+.news-section .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 .5rem;
+}
+
+.news-section .swiper-pagination-bullet-active {
+    background-color: var(--bs-white);
+    width: 1.5rem;
+    height: 7px;
+    border-radius: .5rem;
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/
@@ -313,23 +351,4 @@ a {
 /* Show Scroll Up*/
 .show-scroll {
     bottom: 4rem;
-}
-
-
-@media (min-width: 992px) {
-    .border-lg-end{
-        border-right: 1px solid var(--bs-white) !important;
-    }
-}
-
-@media (max-width: 991px){
-    .border-max-lg-bottom{
-        border-bottom: 1px solid var(--bs-white) !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .scroll_up {
-        right: 1rem;
-    }
 }

@@ -28,7 +28,7 @@ if ($("#myHeader").length) {
 
 /*=============== TESTIMONIAL | SWIPER ===============*/
 if ($(".testimonial").length) {
-var swiper = new Swiper(".testimonial", {
+let swiper = new Swiper(".testimonial", {
     slidesPerView: 6,
     spaceBetween: 30,
     loop: true,
@@ -73,7 +73,59 @@ var swiper = new Swiper(".testimonial", {
         },
     }
   });
-};
+}
+
+/*=============== NEWS | SWIPER ===============*/
+if ($(".news-section").length) {
+    let swiper = new Swiper(".news-section", {
+        grabCursor: true,
+        slidesPerView: 3,
+        // spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                // spaceBetween: 0,
+                // slideToClickedSlide: true,
+            },
+            // when window width is >= 575px
+            575: {
+                slidesPerView: 1,
+                // spaceBetween: 0,
+                // slideToClickedSlide: true,
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 2,
+                // spaceBetween: 0,
+                // slideToClickedSlide: true,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 2,
+                // spaceBetween: 0,
+                // slideToClickedSlide: true,
+            },
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 3,
+                // spaceBetween: 0,
+                // slideToClickedSlide: true,
+            },
+        },
+        keyboard: true,
+    });
+}
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')

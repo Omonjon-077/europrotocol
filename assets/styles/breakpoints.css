@@ -37,9 +37,24 @@
         top: 100%;
         transform: rotateX(0deg);
     }
+
+    .border-lg-end {
+        border-right: 1px solid var(--bs-white) !important;
+    }
 }
 
+@media (max-width: 991px) {
+    .border-max-lg-bottom {
+        border-bottom: 1px solid var(--bs-white) !important;
+    }
+}
 /* ============ desktop view .end// ============ */
+@media (max-width: 767px) {
+    .scroll_up {
+        right: 1rem;
+    }
+}
+
 @media (max-width: 575px) {
     .d-grid-custom {
         text-align: start;
