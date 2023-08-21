@@ -68,11 +68,58 @@ body {
     padding-top: 0;
 }
 
+.accordion-button::after{
+    display: none;
+}
+
+button[aria-expanded^="true"] i {
+    background-color: var(--bs-primary) !important;
+    transform: rotate(-180deg) !important;
+    color: black !important;
+    box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
+}
+
 .btn-primary{
     border-radius: 2px;
-    color: black;
+    color: black;  
     background: var(--bs-primary);
     box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
+}
+
+.self-height-siwper{
+    height: 300px;
+}
+
+.box-shadow-none{
+    box-shadow: none !important;
+}
+.text-tg{
+    color: #4C82F7 !important;
+}
+
+.bg-gray{
+    background-color: #131720 !important;
+}
+
+.primary-shadow{
+    box-shadow: 0px 8px 18px -8px rgba(116, 246, 0, 0.90);
+}
+
+.self-absolute{
+    position: absolute !important;
+    top: 10px !important;
+    left: 30px !important;
+}
+
+.bg-gray-light{
+    background-color: #1c2029 !important;
+}
+
+.btn-secondary{
+    border-radius: 2px;
+    color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    background: transparent;
 }
 
 .cursor-pointer {
@@ -222,18 +269,18 @@ a {
 /*=============== INTRO SECTION | Omonjon ===============*/
 .intro-section{
     background-image: url("../images/intro-bg.jpg") !important;
-    min-height: 100vh;
+    /* min-height: 70vh; */
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/
 ::-webkit-scrollbar {
     width: .6rem;
     border-radius: .5rem;
-    background-color: hsla(92, 100%, 48%, 0.71)
+    background-color: hsla(93, 36%, 26%, 0.71)
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(92, 100%, 48%);
+    background-color: hsla(92, 100%, 48%, 0.743);
     border-radius: .5rem;
 }
 
@@ -260,12 +307,25 @@ a {
 .scroll_up:hover {
     transform: translateY(-.35rem);
     background-color: var(--bs-white);
-    color: var(--bs-dark);
+    color: black;
 }
 
 /* Show Scroll Up*/
 .show-scroll {
     bottom: 4rem;
+}
+
+
+@media (min-width: 992px) {
+    .border-lg-end{
+        border-right: 1px solid var(--bs-white) !important;
+    }
+}
+
+@media (max-width: 991px){
+    .border-max-lg-bottom{
+        border-bottom: 1px solid var(--bs-white) !important;
+    }
 }
 
 @media (max-width: 767px) {
