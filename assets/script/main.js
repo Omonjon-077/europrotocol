@@ -32,7 +32,7 @@ if ($(".partnerSwiper").length) {
         spaceBetween: 30,
         loop: true,
         grabCursor: true,
-        // autoplay: true,
+        autoplay: true,
         breakpoints: {
             // when window width is >= 320px
             320: {
@@ -144,7 +144,7 @@ if ($(".news-section").length) {
             // when window width is >= 320px
             320: {
                 slidesPerView: 1,
-                // spaceBetween: 0,
+                spaceBetween: 15,
                 // slideToClickedSlide: true,
             },
             // when window width is >= 575px
