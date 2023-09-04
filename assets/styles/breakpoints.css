@@ -43,6 +43,15 @@
     }
 }
 
+@media (min-width: 1200px) and (max-width: 1700px) {
+    .border-max-lg-bottom {
+        border-bottom: 1px solid var(--bs-white) !important;
+    }
+    .self-height-lg-siwper{
+        height: 360px;
+    }
+}
+
 @media (max-width: 991px) {
     .border-max-lg-bottom {
         border-bottom: 1px solid var(--bs-white) !important;

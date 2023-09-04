@@ -34,8 +34,8 @@ if ($(".partnerSwiper").length) {
         grabCursor: true,
         autoplay: true,
         breakpoints: {
-            // when window width is >= 320px
-            320: {
+            // when window width is >= 280px
+            280: {
                 slidesPerView: 1,
                 // spaceBetween: 0,
                 // slideToClickedSlide: true,
@@ -84,8 +84,8 @@ if ($(".testimonial").length) {
         grabCursor: true,
         autoplay: true,
         breakpoints: {
-            // when window width is >= 320px
-            320: {
+            // when window width is >= 280px
+            280: {
                 slidesPerView: 1,
                 // spaceBetween: 0,
                 // slideToClickedSlide: true,
@@ -141,8 +141,8 @@ if ($(".news-section").length) {
             dynamicBullets: true,
         },
         breakpoints: {
-            // when window width is >= 320px
-            320: {
+            // when window width is >= 280px
+            280: {
                 slidesPerView: 1,
                 spaceBetween: 15,
                 // slideToClickedSlide: true,
