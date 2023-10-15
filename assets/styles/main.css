@@ -188,6 +188,18 @@ button[aria-expanded^="true"] i {
     width: max-content !important;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .opacity-7 {
     opacity: 0.7;
 }
@@ -246,7 +258,7 @@ a {
     width: 100%;
     height: 100%;
     margin: auto 0;
-    background-color: var(--bs-white);
+    background-color: var(--bs-black);
     display: grid;
     place-items: center;
     z-index: 100;
@@ -318,6 +330,18 @@ a {
     width: 1.5rem;
     height: 7px;
     border-radius: .5rem;
+}
+
+/*=============== FEEDBACK | Omonjon ===============*/
+.feedback .form-control:focus {
+    color: var(--bs-black);
+    border-color: initial;
+    outline: 0;
+    box-shadow: none;
+}
+
+.feedback .form-control {
+    height: 50px !important;
 }
 
 /*=============== SCROLL BAR | Omonjon ===============*/
